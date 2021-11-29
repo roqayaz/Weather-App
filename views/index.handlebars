@@ -1,0 +1,24 @@
+{{!-- WeatherText --}}
+  <div class="container text-center ">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-secondary ">
+          {{#if weather}}
+            <div class="alert alert-secondary mt-4 fs-5 text-dark" role="alert">
+              <p >Weather in {{weather.cityName}}, {{weather.country}}</p>
+              <p id="date">Date</p>
+              <p>{{weather.temp}} &deg;C</p>
+              <p><div class="weather-icon" ><img width="100" height="100" src="https://openweathermap.org/img/w/{{weather.icon}}.png"/></div></p>
+            
+            </div>
+          {{/if}}
+      </div>
+  </div>
+
+  <p class="text-center text-danger mt-5 fs-4"> {{ error }} </p>
+
+  <div class="footer-copyright text-center py-4 fixed-bottom" style="font-family: 'Comforter Brush', cursive; 
+      color: white; font-size: 1.5rem">Made with <span id="heart" style="color: red"> ❤ </span> by Roqayaz 
+  </div>
+  
+
+
